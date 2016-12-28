@@ -1,0 +1,10 @@
+Change Log
+----------
+
+
+12/27/2016
+----------
+
+- Added .tar to the commands.
+- Updated AUTHORS to include a dedication.
+- Updaed autotar.sh to include an automatic installation procedure.
