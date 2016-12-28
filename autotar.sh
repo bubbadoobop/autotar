@@ -9,8 +9,8 @@
 # to the program, please contact me at
 # <bubbadoobop@gmail.com>
 
-echo "AutoTar v1.1"
-echo "Gnu GPL v2.1"
+echo "AutoTar v1.2"
+echo "Gnu GPL v2.1, (c) 2016 Ian Mitchell"
 read -p "Path to tarball:" pathname
 cd "${pathname/#~/$HOME}"
     ls $pathname
@@ -26,9 +26,12 @@ cd "${pathname/#~/$HOME}"
 ls $pathname
 read -p "Please enter the directory of the file you have just unpacked...: " directory
 cd $directory
-read -p "Is this just a script or one file program? [Y/n]" ans
+read -p "Does this directory contain an executable or program you wish to install? [Y/n]" ansr
+case $ansr in
+    y | Y) read -p "Is this just a script or one file program? [Y/n]" ans1
+	   
 
-case $ans in
+case $ans1 in
     y | Y) read -p "What is the file called? *includes file extension*: " file2
 	   read -p "What is the file called? *without the extension*: " file3
 	   install $file2 /usr/local/bin/$file3
@@ -39,3 +42,8 @@ case $ans in
 	   make install
 	   ;;
     esac
+       ;;
+
+    n | N) echo "Ok, I'll exit now."
+       ;;
+       esac 
