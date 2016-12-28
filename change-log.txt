@@ -9,7 +9,7 @@ a program in a file or directory. Generally for people that wish
 to
 
 A) Read the source code.
-B) Have no need to install anything
+B) Have no need to install anything.
 
 
 12/27/2016
