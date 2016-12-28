@@ -1,5 +1,12 @@
 How to Install Bash Scripts in Linux
 -------------------------------------
+
+1) The easy way
+
+sudo ./instal.sh
+
+2) The hard manual way
+
 Suppose we have a directory called myscript in home.
 So, ~/myscript. The first thing you have to do is
 cd into the directory, then enter the following
